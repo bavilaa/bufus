@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Articles on BUFUS</title>
+    <link>http://www.bufus.cl/post/</link>
+    <description>Recent content in Articles on BUFUS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="http://www.bufus.cl/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simulador Economía Chilena</title>
+      <link>http://www.bufus.cl/post/simulador1/</link>
+      <pubDate>Wed, 02 Oct 2019 01:00:39 -0300</pubDate>
+      
+      <guid>http://www.bufus.cl/post/simulador1/</guid>
+      <description>&lt;p&gt;El siguiente post tiene como objetivo describir la metodología
+utilizada para la construcción del simulador de Shocks sobre la economía Chilena.
+&lt;/p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Chapter II: Pierre Gringoire</title>
+      <link>http://www.bufus.cl/post/chapter-2/</link>
+      <pubDate>Mon, 10 Apr 2017 11:00:59 -0400</pubDate>
+      
+      <guid>http://www.bufus.cl/post/chapter-2/</guid>
+      <description>Noticia 2
+   Sector Agricultura Industria Servicios Demanda Final Producción Bruta     Agricultura 100 200 300 100 700   Industria 500 300 200 200 1200   Servicios 400 100 600 500 1600    </description>
+    </item>
+    
+    <item>
+      <title>Chapter I: The Grand Hall</title>
+      <link>http://www.bufus.cl/post/chapter-1/</link>
+      <pubDate>Sun, 09 Apr 2017 10:58:08 -0400</pubDate>
+      
+      <guid>http://www.bufus.cl/post/chapter-1/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

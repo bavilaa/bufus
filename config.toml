@@ -1,0 +1,56 @@
+title = "BUFUS"
+baseURL = "http://www.bufus.cl"
+languageCode = "en-us"
+theme = "ananke"
+#themesDir = "../.."
+
+MetaDataFormat = "yaml"
+DefaultContentLanguage = "en"
+#SectionPagesMenu = "main"
+#Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
+googleAnalytics = ""
+enableRobotsTXT = true
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  commentoEnable = true
+  favicon = ""
+  description = "The last theme you'll ever need. Maybe."
+  facebook = ""
+  twitter = "https://twitter.com/GoHugoIO"
+  instagram = ""
+  youtube = ""
+  github = ""
+  gitlab = ""
+  linkedin = "http://www.linkedin.com/in/bruno-avila-a1925676"
+  mastodon = ""
+  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  background_color_class = "bg-black"
+  featured_image = "/images/ny3.jpg"
+  recent_posts_number = 2
+
+
+[[menu.main]]             # config your menu              # 配置目录
+  name = "Inicio"
+  weight = 10
+  identifier = "home"
+  url = "/"
+[[menu.main]]
+  name = "Blog"
+  weight = 20
+  identifier = "archives"
+  url = "/post/"
+[[menu.main]]
+  name = "Interactivos"
+  weight = 30
+  identifier = "tags"
+  url = "/post/simulador"
+[[menu.main]]
+  name = "About"
+  weight = 40
+  identifier = "About"
+  url = "/about/"
