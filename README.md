@@ -1,4 +1,4 @@
 # Bufus
-###Personal website: http:www.bufus.cl
+### Personal website: http:www.bufus.cl
 
-###Bufus = Owl in old latin.
+### Bufus = Owl in old latin.
