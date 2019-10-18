@@ -35,7 +35,7 @@ utilizada para la construcción del simulador de Shocks sobre la economía Chile
 
 
 
-* Matriz de Insumo Producto : matriz que contiene todas las 
+* Matriz de Insumo Producto : matriz que contiene todas las... /detallar
 <table>
 	<tbody>
 		<tr>
@@ -78,34 +78,20 @@ utilizada para la construcción del simulador de Shocks sobre la economía Chile
 
 
 
-
-
-Para la economía Chilena, estas matrices se encuentran disponibles en el siguiente link:  [MIPs - Banco Central](https://si3.bcentral.cl/estadisticas/Principal1/Informes/anuarioCCNN/index_anuario_CCNN_2018.html?chapterIdx=-1&curSubCat=-1 "Title").
+En el caso chileno, estas matrices se encuentran disponibles en el siguiente link:  [MIPs - Banco Central](https://si3.bcentral.cl/estadisticas/Principal1/Informes/anuarioCCNN/index_anuario_CCNN_2018.html?chapterIdx=-1&curSubCat=-1 "Title").
 
 
 Para explicar la relación existente entre la producción total de la economía, la demanda final y la demanda intermedia se introdirá la siguiente notación matricial.
 
-Con **Xi** se representará la producción total de la **actividad "i"**: 
+Con **Pi** se representará la producción total de la **actividad "i"**: 
 
 
 
-<div>$$\begin{pmatrix}
-	{X_{1}}\\
-	{X_{2}}\\
-	\vdots\\
-	{X_{n}}\end{pmatrix}
-	\begin{pmatrix}
-	{X_{1}}\\
-	{X_{2}}\\
-	\vdots\\
-	{X_{n}}\end{pmatrix}
-	$$
-</div>
 
 <div>$$\begin{pmatrix}
-	{X_{1}}\\
-	{X_{2}}\\
-	{X_{3}}\end{pmatrix}
+	{P_{1}}\\
+	{P_{2}}\\
+	{P_{3}}\end{pmatrix}
 	\begin{pmatrix}
 	{700}\\
 	{1200}\\
@@ -117,12 +103,7 @@ Con **Xi** se representará la producción total de la **actividad "i"**:
 
 Con **yi** se representará la demanda final asociada a la **actividad económica "i"**:
 
-<div>$$\begin{pmatrix}
-	{y_{1}}\\
-	{y_{2}}\\
-	\vdots\\
-	{y_{n}}\end{pmatrix}$$
-</div>
+
 
 
 <div>$$
@@ -136,26 +117,114 @@ Con **yi** se representará la demanda final asociada a la **actividad económic
 	{500}\end{pmatrix}$$
 </div>
 
-
 Con **xij** se representará a las compras/ventas entre sectores
 
-$$\begin{pmatrix} X_{11} & 66 \\\ c & d\end{pmatrix}$$
+**corregir numeros**
 
-$$\binom{xi}{{X_{11}}}$$
+<div>$$
+	\begin{pmatrix}
+    {x_1}_1 & {x_1}_2  & {x_1}_3 \\\ 
+    {x_2}_1 & {x_2}_2 & {x_2}_3\\
+    {x_3}_1 & {x_3}_2 & {x_3}_3 
+    \end{pmatrix}
+
+    \begin{pmatrix}
+    100 & 200  & 300 \\\ 
+    500 & 300 & 200\\
+    400 & 100 & 600 
+    \end{pmatrix}$$
+</div>
+
+Con estas definiciones, la producción total puede ecribirse como:
+
+$$P = X \cdot 1_{n}  + y $$
+
+En donde $$1_{n}$$ corresponde a un vector columna de "1" de tamaño n.
 
 
+<h4>Coeficiente Técnico</h4>
 
-Recordando que para el caso de la apertura de la Matriz Chilena el consumo total corresponde a :
+Es la relación existente entre insumos y producción de cada actividad. Representa la cantidad necesaria de un bien (insumos), para producir otro bien (producto).
+
+Por ejemplo, para el caso de la industria del pan, esta podría estar adquiriendo trigo desde el sector agricultor para la producción de pan. Se podría llegar a una relación monetaria de cuanto de harina ($) se necesita para producir una unidad de pan($).
+
+Esta relación puede construirse utilizando la notacion matricial introducida previamente.
+
+Recordando, que en la matrix X, cada columna, por ejemplo la priera Agricultura, cuanto demanda de su propio sector(fila1), del sector Industria (fila 2) y del sector Servicios (fila3).
+
+Cada coeficiente técnico se denotará como **aij**, 
 
 
-
+<div>$$
+	\begin{pmatrix}
+    {a_1}_1 & {a_1}_2  & {a_1}_3 \\\ 
+    {a_2}_1 & {a_2}_2 & {a_2}_3\\
+    {a_3}_1 & {a_3}_2 & {a_3}_3 
+    \end{pmatrix}
 $$
-	\begin{align}
-	Consumo \ Total = Consumo \ de\ hogares + Consumo\ de\ IPSFL  \newline + 
-	Consumo \ de \ gobierno \ Formación \ Bruta \ de \ Capital Fijo +\newline  
-	Variación de Existencia + Exportaciones
-	\end{align}
-$$
+</div>
+
+En donde, para el caso de la primera columna asociada al sector Agricultura:
+
+
+<div>$$
+	\begin{pmatrix}
+	{a_1}_1\\
+	{a_2}_1\\
+	{a_3}_1\end{pmatrix}
+	=
+	\begin{pmatrix}
+	\frac{{x_1}_1}{P_{1}}\\
+	\frac{{x_1}_1}{P_{1}}\\
+	\frac{{x_1}_1}{P_{1}}\end{pmatrix}
+	=
+	\begin{pmatrix}
+	\frac{{x_1}_1}{P_{1}}\\
+	\frac{{x_1}_1}{P_{1}}\\
+	\frac{{x_1}_1}{P_{1}}\end{pmatrix}$$
+</div>
+
+
+Por lo tanto, esta ecuación:
+
+
+$$P = X \cdot 1_{n}  + y $$
+
+Puede escribirse como:
+
+$$P = A \cdot P  + y $$
+
+Con un poco de algebra matricial se llega a que:
+
+
+$$P = (I-A)^{-1} \cdot y $$
+
+Esta última relación es la base para el cálculo de los "shocks" sobre la economía chilena.
+
+**¿Por que?**
+
+Porque simulando un nuevo vector "y" de demandas finales, por ejemplo una caída de las exportaciones (baja demanda de China por ejemplo), es posible conocer los nuevos niveles de producción "P" de la economía total. Esta simulación no solo permite conocer el nuevo nivel asociado directamente a fsdfds.
+
+
+
+La matriz $$(I-A)$$ es conocida como "Matriz de Leontief".
+Y la matriz $$(I-A)^{-1}$$ como "Inversa de Lentief".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Por lo tanto, la matriz de insumo producto puede escribirse como:
@@ -209,4 +278,48 @@ y &=& x^4 + 4      \nonumber \\
   &=& (x^2+2)^2 -4x^2 \nonumber \\
   &\le&(x^2+2)^2    \nonumber
 \end{eqnarray} 
+$$
+
+
+<div>$$\begin{pmatrix}
+	{y_{1}}\\
+	{y_{2}}\\
+	\vdots\\
+	{y_{n}}\end{pmatrix}$$
+</div>
+
+
+
+<div>$$\begin{pmatrix}
+	{X_{1}}\\
+	{X_{2}}\\
+	\vdots\\
+	{X_{n}}\end{pmatrix}
+	\begin{pmatrix}
+	{X_{1}}\\
+	{X_{2}}\\
+	\vdots\\
+	{X_{n}}\end{pmatrix}
+	$$
+</div>
+
+
+$$\begin{pmatrix} x_{12} & x_2 \\\ 
+c & d
+\end{pmatrix}$$
+
+$$\binom{xi}{{X_{11}}}$$
+
+
+
+Recordando que para el caso de la apertura de la Matriz Chilena el consumo total corresponde a :
+
+
+
+$$
+	\begin{align}
+	Consumo \ Total = Consumo \ de\ hogares + Consumo\ de\ IPSFL  \newline + 
+	Consumo \ de \ gobierno \ Formación \ Bruta \ de \ Capital Fijo +\newline  
+	Variación de Existencia + Exportaciones
+	\end{align}
 $$

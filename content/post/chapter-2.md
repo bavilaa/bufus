@@ -1,16 +1,10 @@
 ---
-date: 2017-04-10T11:00:59-04:00
-description: "Pierre Gringoire"
+date: 2019-10-16T11:00:59-04:00
+description: "Game of Thrones Project"
 featured_image: ""
-tags: ['depresion']
-title: "Chapter II: Pierre Gringoire"
+tags: ['Got,NLP']
+title: "GoT-NLP Project"
 ---
 
-Noticia 2
-
-
-|Sector| Agricultura | Industria | Servicios | Demanda Final     | Producción Bruta|
-|----- |-------------|-----------|-----------|-------------------|------------------|
-|  Agricultura| 100 | 200 | 300 | 100 |700|
-|  Industria  | 500 | 300 | 200 | 200 |1200|
-|  Servicios  | 400 | 100 | 600 | 500 |1600|
+Link :
+https://nbviewer.jupyter.org/github/bavilaa/GR5067_NLP/blob/master/exploring_DB.ipynb
