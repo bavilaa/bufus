@@ -81,7 +81,7 @@ utilizada para la construcción del simulador de Shocks sobre la economía Chile
 En el caso chileno, estas matrices se encuentran disponibles en el siguiente link:  [MIPs - Banco Central](https://si3.bcentral.cl/estadisticas/Principal1/Informes/anuarioCCNN/index_anuario_CCNN_2018.html?chapterIdx=-1&curSubCat=-1 "Title").
 
 
-Para explicar la relación existente entre la producción total de la economía, la demanda final y la demanda intermedia se introdirá la siguiente notación matricial.
+Para explicar la relación existente entre la producción total de la economía, la demanda final y la demanda intermedia se introducirá la siguiente notación matricial.
 
 Con **Pi** se representará la producción total de la **actividad "i"**: 
 
@@ -144,9 +144,11 @@ En donde $$1_{n}$$ corresponde a un vector columna de "1" de tamaño n.
 
 <h4>Coeficiente Técnico</h4>
 
-Es la relación existente entre insumos y producción de cada actividad. Representa la cantidad necesaria de un bien (insumos), para producir otro bien (producto).
+Es la relación existente entre insumos y producción de cada actividad. Representa la cantidad necesaria de un bien (insumos), para producir otro bien (producto). 
 
 Por ejemplo, para el caso de la industria del pan, esta podría estar adquiriendo trigo desde el sector agricultor para la producción de pan. Se podría llegar a una relación monetaria de cuanto de harina ($) se necesita para producir una unidad de pan($).
+
+En el corto plazo, ante la no presencia de cambios tecnológicos en los procesos productivos, se puede asumir que esta relación es relativamente constante. 
 
 Esta relación puede construirse utilizando la notacion matricial introducida previamente.
 
@@ -188,7 +190,7 @@ En donde, para el caso de la primera columna asociada al sector Agricultura:
 Por lo tanto, esta ecuación:
 
 
-$$P = X \cdot 1_{n}  + y $$
+$$P = X \cdot 1_{n}  + y  $$
 
 Puede escribirse como:
 
@@ -201,9 +203,26 @@ $$P = (I-A)^{-1} \cdot y $$
 
 Esta última relación es la base para el cálculo de los "shocks" sobre la economía chilena.
 
-**¿Por que?**
+**Nota:**
 
-Porque simulando un nuevo vector "y" de demandas finales, por ejemplo una caída de las exportaciones (baja demanda de China por ejemplo), es posible conocer los nuevos niveles de producción "P" de la economía total. Esta simulación no solo permite conocer el nuevo nivel asociado directamente a fsdfds.
+$$ (I-A) = Matriz \ de \ Leontief $$
+$$ (I-A)^{-1} = Matriz \ inversa \ de \ Leontief $$
+
+**¿Por qué?**
+
+Porque simulando un nuevo vector "y" de consumos finales, por ejemplo una caída de las exportaciones (debido a una baja demanda de cobre de China por ejemplo), es posible conocer los nuevos niveles de producción "P" asociado a la minería. Esta simulación no solo permite conocer el nuevo nivel asociado a la minería debido a esta baja en la demanda, sino que el efecto de "encadenamiento productivo" sobre la economía total.
+
+
+**Encadenamiento productivo**
+
+Una caída por demanda de cobre no sólo tendrá un efecto directo en la producción nacional de la minería, sino que debido a que la Industria Minera demanda insumos de los Servicios (por ejemplo, Servicios de Ingeniería), provocará una baja en la producción de Servicios. Debido a que las empresas de servicios de ingeniería, demandan a su vez empresas de servicios de ingeniería para la producción de sus servicios, provocarán una caída sobre si misma. Este efecto de encadenamiento se va diluyendo en cada iteración. La relación matricial para obtener los nuevos nivel de producción "Pi" permite calcular el efecto final de estos encadenamientos.
+
+
+
+
+
+
+----------------------------
 
 
 
