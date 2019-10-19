@@ -32,6 +32,7 @@ enableRobotsTXT = true
   background_color_class = "bg-black"
   featured_image = "/images/ny3.jpg"
   recent_posts_number = 2
+  custom_css = ["css/style1.css"]
 
 
 [[menu.main]]             # config your menu              # 配置目录
@@ -48,9 +49,10 @@ enableRobotsTXT = true
   name = "Interactivos"
   weight = 30
   identifier = "tags"
-  url = "/post/simulador"
+  url = "https://bufus.shinyapps.io/simulador1/"
 [[menu.main]]
   name = "About"
   weight = 40
   identifier = "About"
   url = "/about/"
+

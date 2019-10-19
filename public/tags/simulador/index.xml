@@ -17,9 +17,12 @@
       <pubDate>Wed, 02 Oct 2019 01:00:39 -0300</pubDate>
       
       <guid>http://www.bufus.cl/post/simulador1/</guid>
-      <description>&lt;p&gt;El siguiente post tiene como objetivo describir la metodología
+      <description>&lt;p&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css&#34;/&gt;&lt;/p&gt;
+
+&lt;p style=&#34;text-align:justify;&#34;&gt;
+El siguiente post tiene como objetivo describir la metodología
 utilizada para la construcción del simulador de Shocks sobre la economía Chilena.
-&lt;/p&gt;&lt;/p&gt;</description>
+&lt;/p&gt;</description>
     </item>
     
   </channel>

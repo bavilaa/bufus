@@ -7,10 +7,9 @@ tags: ["simulador", "economia", "chile", "estadisticas"]
 
 ---
 
+<link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
 
-
-
-
+<p style="text-align:justify;">
 El siguiente post tiene como objetivo describir la metodología
 utilizada para la construcción del simulador de Shocks sobre la economía Chilena.
 </p>
@@ -22,7 +21,6 @@ utilizada para la construcción del simulador de Shocks sobre la economía Chile
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<h3>Definiciones</h3>
 
 <style>
 .zebra-striping tbody tr:nth-child(odd) {
@@ -33,9 +31,12 @@ utilizada para la construcción del simulador de Shocks sobre la economía Chile
 <div class="ox-hugo-table zebra-striping sane-table">
 <div></div>
 
+**Matriz de insumo producto**
 
+* Matriz de Insumo Producto : matriz que contiene todas las... /detallar 
 
-* Matriz de Insumo Producto : matriz que contiene todas las... /detallar
+<div>
+
 <table>
 	<tbody>
 		<tr>
@@ -76,17 +77,28 @@ utilizada para la construcción del simulador de Shocks sobre la economía Chile
 	</tbody>
 </table>
 
+</div>
 
 
-En el caso chileno, estas matrices se encuentran disponibles en el siguiente link:  [MIPs - Banco Central](https://si3.bcentral.cl/estadisticas/Principal1/Informes/anuarioCCNN/index_anuario_CCNN_2018.html?chapterIdx=-1&curSubCat=-1 "Title").
+<p style="text-align:justify;">
+En el caso chileno, estas matrices se encuentran disponibles en el siguiente link:
+
+</p>
 
 
+[MIPs - Banco Central](https://si3.bcentral.cl/estadisticas/Principal1/Informes/anuarioCCNN/index_anuario_CCNN_2018.html?chapterIdx=-1&curSubCat=-1 "Title").
+
+<p style="text-align:justify;">
 Para explicar la relación existente entre la producción total de la economía, la demanda final y la demanda intermedia se introducirá la siguiente notación matricial.
 
-Con **Pi** se representará la producción total de la **actividad "i"**: 
+</p>
 
 
+<p style="text-align:justify;">
 
+Con <b>Pi</b> se representará la producción total de la <b>actividad "i":</b>
+
+</p>
 
 <div>$$\begin{pmatrix}
 	{P_{1}}\\
@@ -100,9 +112,11 @@ Con **Pi** se representará la producción total de la **actividad "i"**:
 </div>
 
 
+<p style="text-align:justify;">
 
 Con **yi** se representará la demanda final asociada a la **actividad económica "i"**:
 
+</p>
 
 
 
@@ -135,39 +149,26 @@ Con **xij** se representará a las compras/ventas entre sectores
     \end{pmatrix}$$
 </div>
 
-Con estas definiciones, la producción total puede ecribirse como:
+Con estas definiciones, la producción total, en términos matriciales, puede ecribirse como:
 
 $$P = X \cdot 1_{n}  + y $$
 
 En donde $$1_{n}$$ corresponde a un vector columna de "1" de tamaño n.
 
 
-<h4>Coeficiente Técnico</h4>
+**Coeficiente Técnico**
 
-Es la relación existente entre insumos y producción de cada actividad. Representa la cantidad necesaria de un bien (insumos), para producir otro bien (producto). 
+<p style="text-align:justify;">
 
-Por ejemplo, para el caso de la industria del pan, esta podría estar adquiriendo trigo desde el sector agricultor para la producción de pan. Se podría llegar a una relación monetaria de cuanto de harina ($) se necesita para producir una unidad de pan($).
+Es la relación existente entre insumos y producción total de cada actividad. Representa la cantidad necesaria de un bien (insumos), para producir otro bien (producto). 
 
-En el corto plazo, ante la no presencia de cambios tecnológicos en los procesos productivos, se puede asumir que esta relación es relativamente constante. 
+Por ejemplo, para el caso de la industria del pan, esta podría estar adquiriendo trigo desde el sector agricultor para la producción de pan. Se podría llegar a una relación monetaria de cuanto de trigo ($) se necesita para producir una unidad de pan($).
 
-Esta relación puede construirse utilizando la notacion matricial introducida previamente.
+En el corto plazo, ante la no presencia de cambios tecnológicos en los procesos productivos, se puede asumir que esta relación es relativamente constante, siendo este uno de los principales supuestos del simulador de "Shocks".
 
-Recordando, que en la matrix X, cada columna, por ejemplo la priera Agricultura, cuanto demanda de su propio sector(fila1), del sector Industria (fila 2) y del sector Servicios (fila3).
+Cada coeficiente técnico se denotará como <b>aij</b>, en donde para el caso de la primera columna, se tiene lo siguiente:
 
-Cada coeficiente técnico se denotará como **aij**, 
-
-
-<div>$$
-	\begin{pmatrix}
-    {a_1}_1 & {a_1}_2  & {a_1}_3 \\\ 
-    {a_2}_1 & {a_2}_2 & {a_2}_3\\
-    {a_3}_1 & {a_3}_2 & {a_3}_3 
-    \end{pmatrix}
-$$
-</div>
-
-En donde, para el caso de la primera columna asociada al sector Agricultura:
-
+</p>
 
 <div>$$
 	\begin{pmatrix}
@@ -187,6 +188,28 @@ En donde, para el caso de la primera columna asociada al sector Agricultura:
 </div>
 
 
+
+
+<p style="text-align:justify;">
+
+Considerando las demás columnas, se define la matriz de <b>A</b> de coeficientes técnicos:
+
+</p>
+
+
+<div>$$
+	\begin{pmatrix}
+    {a_1}_1 & {a_1}_2  & {a_1}_3 \\\ 
+    {a_2}_1 & {a_2}_2 & {a_2}_3\\
+    {a_3}_1 & {a_3}_2 & {a_3}_3 
+    \end{pmatrix}
+$$
+</div>
+
+
+
+
+
 Por lo tanto, esta ecuación:
 
 
@@ -201,7 +224,7 @@ Con un poco de algebra matricial se llega a que:
 
 $$P = (I-A)^{-1} \cdot y $$
 
-Esta última relación es la base para el cálculo de los "shocks" sobre la economía chilena.
+Esta última relación es la base matemática para el cálculo de los "shocks" sobre la economía chilena.
 
 **Nota:**
 
@@ -210,15 +233,21 @@ $$ (I-A)^{-1} = Matriz \ inversa \ de \ Leontief $$
 
 **¿Por qué?**
 
+<p style="text-align:justify;">
+
 Porque simulando un nuevo vector "y" de consumos finales, por ejemplo una caída de las exportaciones (debido a una baja demanda de cobre de China por ejemplo), es posible conocer los nuevos niveles de producción "P" asociado a la minería. Esta simulación no solo permite conocer el nuevo nivel asociado a la minería debido a esta baja en la demanda, sino que el efecto de "encadenamiento productivo" sobre la economía total.
+
+</p>
 
 
 **Encadenamiento productivo**
 
-Una caída por demanda de cobre no sólo tendrá un efecto directo en la producción nacional de la minería, sino que debido a que la Industria Minera demanda insumos de los Servicios (por ejemplo, Servicios de Ingeniería), provocará una baja en la producción de Servicios. Debido a que las empresas de servicios de ingeniería, demandan a su vez empresas de servicios de ingeniería para la producción de sus servicios, provocarán una caída sobre si misma. Este efecto de encadenamiento se va diluyendo en cada iteración. La relación matricial para obtener los nuevos nivel de producción "Pi" permite calcular el efecto final de estos encadenamientos.
+<p style="text-align:justify;">
 
 
 
+Una caída por demanda de cobre no sólo tendrá un efecto directo en la producción nacional de la minería, sino que debido a que la Industria Minera demanda insumos de los Servicios (por ejemplo, Servicios de Ingeniería), provocará una baja en la producción de Servicios.Por otro lado, las empresas de Servicios de Ingeniería, demandan a su vez otras empresas de Servicios de Ongeniería para la generación de su producción, esto provocará una caída en la actividad sobre si misma. Este efecto de encadenamiento se va diluyendo en cada iteración. La relación matricial para obtener los nuevos nivel de producción "Pi" permite calcular el efecto final de estos encadenamientos y obtener los nuevos niveles de equilibrio de producción de todos los sectores económicos.
+</p>
 
 
 
