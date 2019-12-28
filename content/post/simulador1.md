@@ -1,7 +1,7 @@
 ---
-title: "Simulador Economía Chilena"
+title: "Simulador Economía Chilena - En Construcción"
 date: 2019-10-02T01:00:39-03:00
-#draft: true
+draft: false
 tags: ["simulador", "economia", "chile", "estadisticas"]
 
 
@@ -114,7 +114,7 @@ Con <b>Pi</b> se representará la producción total de la <b>actividad "i":</b>
 
 <p style="text-align:justify;">
 
-Con **yi** se representará la demanda final asociada a la **actividad económica "i"**:
+Con <b>yi</b> se representará la demanda final asociada a la **actividad económica "i"**:
 
 </p>
 
@@ -133,7 +133,7 @@ Con **yi** se representará la demanda final asociada a la **actividad económic
 
 Con **xij** se representará a las compras/ventas entre sectores
 
-**corregir numeros**
+
 
 <div>$$
 	\begin{pmatrix}
@@ -235,7 +235,7 @@ $$ (I-A)^{-1} = Matriz \ inversa \ de \ Leontief $$
 
 <p style="text-align:justify;">
 
-Porque simulando un nuevo vector "y" de consumos finales, por ejemplo una caída de las exportaciones (debido a una baja demanda de cobre de China por ejemplo), es posible conocer los nuevos niveles de producción "P" asociado a la minería. Esta simulación no solo permite conocer el nuevo nivel asociado a la minería debido a esta baja en la demanda, sino que el efecto de "encadenamiento productivo" sobre la economía total.
+Porque simulando un nuevo vector "y" de consumos finales, por ejemplo una caída de las exportaciones (debido a una baja demanda de cobre de China) es posible conocer los nuevos niveles de producción "P" asociados a esta baja en la demanda de minería. Esta simulación no solo permite conocer el nuevo nivel asociado a la minería debido a esta baja en la demanda, sino que el efecto de "encadenamiento productivo" sobre la economía total.
 
 </p>
 
@@ -246,7 +246,7 @@ Porque simulando un nuevo vector "y" de consumos finales, por ejemplo una caída
 
 
 
-Una caída por demanda de cobre no sólo tendrá un efecto directo en la producción nacional de la minería, sino que debido a que la Industria Minera demanda insumos de los Servicios (por ejemplo, Servicios de Ingeniería), provocará una baja en la producción de Servicios.Por otro lado, las empresas de Servicios de Ingeniería, demandan a su vez otras empresas de Servicios de Ongeniería para la generación de su producción, esto provocará una caída en la actividad sobre si misma. Este efecto de encadenamiento se va diluyendo en cada iteración. La relación matricial para obtener los nuevos nivel de producción "Pi" permite calcular el efecto final de estos encadenamientos y obtener los nuevos niveles de equilibrio de producción de todos los sectores económicos.
+Una caída en la demanda de cobre no sólo tendrá un efecto directo en la producción nacional de la minería, sino que debido a que la Industria Minera demanda insumos de los Servicios (por ejemplo, Servicios de Ingeniería), provocará una baja en la producción de Servicios.Por otro lado, las empresas de Servicios de Ingeniería, demandan a su vez otras empresas de Servicios de Ongeniería para la generación de su producción, esto provocará una caída en la actividad sobre si misma. Este efecto de encadenamiento se va diluyendo en cada iteración. La relación matricial para obtener los nuevos nivel de producción "Pi" permite calcular el efecto final de estos encadenamientos y obtener los nuevos niveles de equilibrio de producción de todos los sectores económicos.
 </p>
 
 
@@ -254,120 +254,3 @@ Una caída por demanda de cobre no sólo tendrá un efecto directo en la producc
 ----------------------------
 
 
-
-La matriz $$(I-A)$$ es conocida como "Matriz de Leontief".
-Y la matriz $$(I-A)^{-1}$$ como "Inversa de Lentief".
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Por lo tanto, la matriz de insumo producto puede escribirse como:
-
-$$X = AX + y $$
-
-Conteniendo las producciones totales de la actividad 1, 2 ... n (n=12 para el caso del simulador)
-
-
-
-
-
-
-
-
-\begin{align}
-\dot{x} & = \sigma(y-x) penita \newline
-\dot{y} & = \rho x - y - xz \newline
-\dot{z} & = -\beta z + xy
-\end{align}
-
-
-$$\sqrt{3x-1}+(1+x)^2$$
-
-
-$$
-\begin{align}
-  \nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \newline
-  \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \newline
-  \nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \newline
-  \nabla \cdot \vec{\mathbf{B}} & = 0
-\end{align}
-$$
-
-
-
-$$\begin{pmatrix}a & b\\\ c & d\end{pmatrix}$$
-
-$$\binom{xi}{x}$$
-
-
-
-
-
-$$\begin{pmatrix}{X_{1}}\end{pmatrix}$$
-
-
-$$
-\begin{eqnarray} 
-y &=& x^4 + 4      \nonumber \\
-  &=& (x^2+2)^2 -4x^2 \nonumber \\
-  &\le&(x^2+2)^2    \nonumber
-\end{eqnarray} 
-$$
-
-
-<div>$$\begin{pmatrix}
-	{y_{1}}\\
-	{y_{2}}\\
-	\vdots\\
-	{y_{n}}\end{pmatrix}$$
-</div>
-
-
-
-<div>$$\begin{pmatrix}
-	{X_{1}}\\
-	{X_{2}}\\
-	\vdots\\
-	{X_{n}}\end{pmatrix}
-	\begin{pmatrix}
-	{X_{1}}\\
-	{X_{2}}\\
-	\vdots\\
-	{X_{n}}\end{pmatrix}
-	$$
-</div>
-
-
-$$\begin{pmatrix} x_{12} & x_2 \\\ 
-c & d
-\end{pmatrix}$$
-
-$$\binom{xi}{{X_{11}}}$$
-
-
-
-Recordando que para el caso de la apertura de la Matriz Chilena el consumo total corresponde a :
-
-
-
-$$
-	\begin{align}
-	Consumo \ Total = Consumo \ de\ hogares + Consumo\ de\ IPSFL  \newline + 
-	Consumo \ de \ gobierno \ Formación \ Bruta \ de \ Capital Fijo +\newline  
-	Variación de Existencia + Exportaciones
-	\end{align}
-$$

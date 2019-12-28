@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>BUFUS  | Simulador Economía Chilena</title>
+    <title>BUFUS  | Simulador Economía Chilena - En Construcción</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.58.1" />
     
@@ -27,7 +27,7 @@
 
     
     
-    <meta property="og:title" content="Simulador Economía Chilena" />
+    <meta property="og:title" content="Simulador Economía Chilena - En Construcción" />
 <meta property="og:description" content="
 
 
@@ -38,7 +38,7 @@ utilizada para la construcción del simulador de Shocks sobre la economía Chile
 <meta property="og:url" content="http://www.bufus.cl/post/simulador1/" />
 <meta property="article:published_time" content="2019-10-02T01:00:39-03:00" />
 <meta property="article:modified_time" content="2019-10-02T01:00:39-03:00" />
-<meta itemprop="name" content="Simulador Economía Chilena">
+<meta itemprop="name" content="Simulador Economía Chilena - En Construcción">
 <meta itemprop="description" content="
 
 
@@ -49,13 +49,13 @@ utilizada para la construcción del simulador de Shocks sobre la economía Chile
 
 <meta itemprop="datePublished" content="2019-10-02T01:00:39-03:00" />
 <meta itemprop="dateModified" content="2019-10-02T01:00:39-03:00" />
-<meta itemprop="wordCount" content="909">
+<meta itemprop="wordCount" content="687">
 
 
 
 <meta itemprop="keywords" content="simulador,economia,chile,estadisticas," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Simulador Economía Chilena"/>
+<meta name="twitter:title" content="Simulador Economía Chilena - En Construcción"/>
 <meta name="twitter:description" content="
 
 
@@ -97,7 +97,7 @@ utilizada para la construcción del simulador de Shocks sobre la economía Chile
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://bufus.shinyapps.io/simulador1/" title="Interactivos page">
+            <a class="hover-white no-underline white-90" href="https://bufus.shinyapps.io/simulador2/" title="Interactivos page">
               Interactivos
             </a>
           </li>
@@ -169,7 +169,7 @@ utilizada para la construcción del simulador de Shocks sobre la economía Chile
           
         ARTICLES
       </p>
-      <h1 class="f1 athelas mb1">Simulador Economía Chilena</h1>
+      <h1 class="f1 athelas mb1">Simulador Economía Chilena - En Construcción</h1>
       
       
       <time class="f6 mv4 dib tracked" datetime="2019-10-02T01:00:39-03:00">October 2, 2019</time>
@@ -277,7 +277,7 @@ Con <b>Pi</b> se representará la producción total de la <b>actividad "i":</b>
 
 <p style="text-align:justify;">
 
-Con **yi** se representará la demanda final asociada a la **actividad económica "i"**:
+Con <b>yi</b> se representará la demanda final asociada a la **actividad económica "i"**:
 
 </p>
 
@@ -293,8 +293,6 @@ Con **yi** se representará la demanda final asociada a la **actividad económic
 </div>
 
 <p>Con <strong>xij</strong> se representará a las compras/ventas entre sectores</p>
-
-<p><strong>corregir numeros</strong></p>
 
 <div>$$
     \begin{pmatrix}
@@ -385,7 +383,7 @@ $$ (I-A)^{-1} = Matriz \ inversa \ de \ Leontief $$</p>
 
 <p style="text-align:justify;">
 
-Porque simulando un nuevo vector "y" de consumos finales, por ejemplo una caída de las exportaciones (debido a una baja demanda de cobre de China por ejemplo), es posible conocer los nuevos niveles de producción "P" asociado a la minería. Esta simulación no solo permite conocer el nuevo nivel asociado a la minería debido a esta baja en la demanda, sino que el efecto de "encadenamiento productivo" sobre la economía total.
+Porque simulando un nuevo vector "y" de consumos finales, por ejemplo una caída de las exportaciones (debido a una baja demanda de cobre de China) es posible conocer los nuevos niveles de producción "P" asociados a esta baja en la demanda de minería. Esta simulación no solo permite conocer el nuevo nivel asociado a la minería debido a esta baja en la demanda, sino que el efecto de "encadenamiento productivo" sobre la economía total.
 
 </p>
 
@@ -395,86 +393,10 @@ Porque simulando un nuevo vector "y" de consumos finales, por ejemplo una caída
 
 
 
-Una caída por demanda de cobre no sólo tendrá un efecto directo en la producción nacional de la minería, sino que debido a que la Industria Minera demanda insumos de los Servicios (por ejemplo, Servicios de Ingeniería), provocará una baja en la producción de Servicios.Por otro lado, las empresas de Servicios de Ingeniería, demandan a su vez otras empresas de Servicios de Ongeniería para la generación de su producción, esto provocará una caída en la actividad sobre si misma. Este efecto de encadenamiento se va diluyendo en cada iteración. La relación matricial para obtener los nuevos nivel de producción "Pi" permite calcular el efecto final de estos encadenamientos y obtener los nuevos niveles de equilibrio de producción de todos los sectores económicos.
+Una caída en la demanda de cobre no sólo tendrá un efecto directo en la producción nacional de la minería, sino que debido a que la Industria Minera demanda insumos de los Servicios (por ejemplo, Servicios de Ingeniería), provocará una baja en la producción de Servicios.Por otro lado, las empresas de Servicios de Ingeniería, demandan a su vez otras empresas de Servicios de Ongeniería para la generación de su producción, esto provocará una caída en la actividad sobre si misma. Este efecto de encadenamiento se va diluyendo en cada iteración. La relación matricial para obtener los nuevos nivel de producción "Pi" permite calcular el efecto final de estos encadenamientos y obtener los nuevos niveles de equilibrio de producción de todos los sectores económicos.
 </p>
 
-<hr />
-
-<p>La matriz $$(I-A)$$ es conocida como &ldquo;Matriz de Leontief&rdquo;.
-Y la matriz $$(I-A)^{-1}$$ como &ldquo;Inversa de Lentief&rdquo;.</p>
-
-<p>Por lo tanto, la matriz de insumo producto puede escribirse como:</p>
-
-<p>$$X = AX + y $$</p>
-
-<p>Conteniendo las producciones totales de la actividad 1, 2 &hellip; n (n=12 para el caso del simulador)</p>
-
-<p>\begin{align}
-\dot{x} &amp; = \sigma(y-x) penita \newline
-\dot{y} &amp; = \rho x - y - xz \newline
-\dot{z} &amp; = -\beta z + xy
-\end{align}</p>
-
-<p>$$\sqrt{3x-1}+(1+x)^2$$</p>
-
-<p>$$
-\begin{align}
-  \nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \newline
-  \nabla \cdot \vec{\mathbf{E}} &amp; = 4 \pi \rho \newline
-  \nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp; = \vec{\mathbf{0}} \newline
-  \nabla \cdot \vec{\mathbf{B}} &amp; = 0
-\end{align}
-$$</p>
-
-<p>$$\begin{pmatrix}a &amp; b\\ c &amp; d\end{pmatrix}$$</p>
-
-<p>$$\binom{xi}{x}$$</p>
-
-<p>$$\begin{pmatrix}{X_{1}}\end{pmatrix}$$</p>
-
-<p>$$
-\begin{eqnarray}
-y &amp;=&amp; x^4 + 4      \nonumber <br />
-  &amp;=&amp; (x^2+2)^2 -4x^2 \nonumber <br />
-  &amp;\le&amp;(x^2+2)^2    \nonumber
-\end{eqnarray}
-$$</p>
-
-<div>$$\begin{pmatrix}
-    {y_{1}}\\
-    {y_{2}}\\
-    \vdots\\
-    {y_{n}}\end{pmatrix}$$
-</div>
-
-<div>$$\begin{pmatrix}
-    {X_{1}}\\
-    {X_{2}}\\
-    \vdots\\
-    {X_{n}}\end{pmatrix}
-    \begin{pmatrix}
-    {X_{1}}\\
-    {X_{2}}\\
-    \vdots\\
-    {X_{n}}\end{pmatrix}
-    $$
-</div>
-
-<p>$$\begin{pmatrix} x_{12} &amp; x_2 \\
-c &amp; d
-\end{pmatrix}$$</p>
-
-<p>$$\binom{xi}{{X_{11}}}$$</p>
-
-<p>Recordando que para el caso de la apertura de la Matriz Chilena el consumo total corresponde a :</p>
-
-<p>$$
-    \begin{align}
-    Consumo \ Total = Consumo \ de\ hogares + Consumo\ de\ IPSFL  \newline +
-    Consumo \ de \ gobierno \ Formación \ Bruta \ de \ Capital Fijo +\newline<br />
-    Variación de Existencia + Exportaciones
-    \end{align}
-$$</p><ul class="pa0">
+<hr /><ul class="pa0">
   
    <li class="list">
      <a href="/tags/simulador" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">simulador</a>

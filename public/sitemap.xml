@@ -4,28 +4,7 @@
   
   <url>
     <loc>http://www.bufus.cl/</loc>
-    <lastmod>2019-10-16T11:00:59-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.bufus.cl/tags/gotnlp/</loc>
-    <lastmod>2019-10-16T11:00:59-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.bufus.cl/post/chapter-2/</loc>
-    <lastmod>2019-10-16T11:00:59-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.bufus.cl/tags/</loc>
-    <lastmod>2019-10-16T11:00:59-04:00</lastmod>
+    <lastmod>2019-10-02T01:00:39-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -66,22 +45,22 @@
   </url>
   
   <url>
-    <loc>http://www.bufus.cl/post/chapter-1/</loc>
-    <lastmod>2017-04-09T10:58:08-04:00</lastmod>
+    <loc>http://www.bufus.cl/tags/</loc>
+    <lastmod>2019-10-02T01:00:39-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.bufus.cl/tags/depresion/</loc>
-    <lastmod>2017-04-09T10:58:08-04:00</lastmod>
+    <loc>http://www.bufus.cl/tags/gotnlp/</loc>
+    <lastmod>2019-09-16T11:00:59-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.bufus.cl/tags/scene/</loc>
-    <lastmod>2017-04-09T10:58:08-04:00</lastmod>
+    <loc>http://www.bufus.cl/post/chapter-2/</loc>
+    <lastmod>2019-09-16T11:00:59-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

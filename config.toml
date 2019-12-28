@@ -49,7 +49,7 @@ enableRobotsTXT = true
   name = "Interactivos"
   weight = 30
   identifier = "tags"
-  url = "https://bufus.shinyapps.io/simulador1/"
+  url = "https://bufus.shinyapps.io/simulador2/"
 [[menu.main]]
   name = "About"
   weight = 40
