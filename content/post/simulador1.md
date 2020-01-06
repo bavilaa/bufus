@@ -33,7 +33,7 @@ utilizada para la construcción del simulador de Shocks sobre la economía Chile
 
 **Matriz de insumo producto**
 
-* Matriz de Insumo Producto : matriz que contiene todas las... /detallar 
+* Matriz de Insumo Producto : matriz que contiene el equilibrio entre la oferta y la utilización de bienes y servicios en un periodo determinado de tiempo
 
 <div>
 
